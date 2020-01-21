@@ -1,9 +1,0 @@
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Debug\ParserCalculator.dll
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Debug\ParserCalculator.pdb
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Debug\nunit.framework.dll
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Debug\nunit.framework.pdb
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Debug\nunit.framework.xml
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Debug\ParserCalculator.csprojAssemblyReference.cache
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Debug\ParserCalculator.csproj.CopyComplete
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Debug\ParserCalculator.dll
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Debug\ParserCalculator.pdb

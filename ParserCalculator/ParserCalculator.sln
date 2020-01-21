@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserCalculator", "ParserC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParserCalculator.Tests", "ParserCalculator.Tests\ParserCalculator.Tests.csproj", "{4B43ABF8-1DAA-4B5D-B563-8D5302B7ABAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{3DF2F689-07A5-4631-8D30-673CBCAFE8B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCalculator", "Calculator\ConsoleCalculator.csproj", "{3DF2F689-07A5-4631-8D30-673CBCAFE8B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

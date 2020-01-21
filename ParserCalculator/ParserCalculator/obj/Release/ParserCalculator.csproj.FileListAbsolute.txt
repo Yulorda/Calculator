@@ -1,9 +1,0 @@
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Release\ParserCalculator.dll
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Release\ParserCalculator.pdb
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Release\ParserCalculator.csprojAssemblyReference.cache
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Release\ParserCalculator.dll
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Release\ParserCalculator.pdb
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Release\nunit.framework.dll
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Release\nunit.framework.pdb
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\bin\Release\nunit.framework.xml
-C:\Users\xsxsm\source\repos\ParserCalculator\ParserCalculator\obj\Release\ParserCalculator.csproj.CopyComplete

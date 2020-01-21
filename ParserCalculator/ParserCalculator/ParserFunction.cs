@@ -10,14 +10,19 @@ namespace ParserCalculator
     {
         private static Dictionary<string, ParserFunction> function = new Dictionary<string, ParserFunction>();
         private static StringToDoubleFunction stringToDoubleFunc = new StringToDoubleFunction();
-        private static IdentityFunction identityFun = new IdentityFunction();
+        private static IdentityFunction identityFunс = new IdentityFunction();
         private ParserFunction implementationFunc;
+
+        public ParserFunction()
+        {
+            implementationFunc = this;
+        }
 
         internal ParserFunction(string data, string item, ref int from, char to)
         {
             if (item.Length == 0)
             {
-                implementationFunc = identityFun;
+                implementationFunc = identityFunс;
                 return;
             }
 
@@ -27,7 +32,7 @@ namespace ParserCalculator
             }
 
             stringToDoubleFunc.Item = item;
-            implementationFunc = stringToDoubleFunc;
+            implementationFunc = stringToDoubleFunc; //попытка преобразовать в число, если функция не была определена
         }
 
         public static void AddFunction(string name, ParserFunction function)
@@ -39,15 +44,13 @@ namespace ParserCalculator
         {
             return implementationFunc.Evaluate(data, ref from, to);
         }
+
         protected virtual double Evaluate(string data, ref int from, char to)
         {
             return 0;
         }
 
-        public ParserFunction()
-        {
-            implementationFunc = this;
-        }
+      
 
     }
 }

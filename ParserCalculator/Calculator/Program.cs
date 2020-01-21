@@ -1,7 +1,7 @@
 ﻿using System;
 using ParserCalculator;
 
-namespace Calculator
+namespace ConsoleCalculator
 {
     class Program
     {

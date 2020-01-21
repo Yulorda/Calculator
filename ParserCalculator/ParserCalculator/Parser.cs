@@ -23,8 +23,27 @@ namespace ParserCalculator
             operation.Add('-', new Operation(2, (a, b) => a - b));
 
             brackets.Add('(', ')');
-
         }
+
+        //public void AddBrackets(char start, char end)
+        //{
+        //    brackets.Add(start, end);
+        //}
+
+        //public void AddOperation(char symbol, int priority, Func<double, double, double> func)
+        //{
+        //    operation.Add(symbol, new Operation(priority, func));
+        //}
+
+        //public Dictionary<char,int> ReturnOperationImportance()
+        //{
+        //    var result = new Dictionary<char, int>();
+        //    foreach(var count in operation)
+        //    {
+        //        result.Add(count.Key, count.Value.priority);
+        //    }
+        //    return result;
+        //}
 
         static public double Start(string expression)
         {
@@ -32,17 +51,16 @@ namespace ParserCalculator
             return SplitAndCalculate(expression, ref index, END).Value;
         }
 
-        //Разбивает на токены-операции, производит сляние
+        //Разбивает на части до тех пор пока не будет найден конечный элемент, производит слияние
         internal static Monomial SplitAndCalculate(string data, ref int from, char to)
         {
+            if (from >= data.Length)
+                throw new ArgumentException("Некорректное выражение " + data);
+
             var result = new Monomial();
             var listToMerge = new List<Monomial>();
             var item = new StringBuilder();
-            var index = 1;
             char currentSymbol = to;
-            
-            if (from >= data.Length)
-                throw new ArgumentException("Некорректное выражение " + data);
 
             do
             {
@@ -56,6 +74,7 @@ namespace ParserCalculator
 
                 if (brackets.ContainsKey(currentSymbol))
                 {
+                    //Находит результат в скобках
                     result = SplitAndCalculate(data, ref from, brackets[currentSymbol]);
                     result.Action = UpdateAction(data, ref from, to);
                 }
@@ -70,9 +89,10 @@ namespace ParserCalculator
                 listToMerge.Add(result);
                 item.Clear();
 
-            } while (from < data.Length && currentSymbol != to);
+            } while (from < data.Length && currentSymbol != to); //Если скобка закрыта находим результат многочлена
 
-            return Merge(listToMerge[0], listToMerge, ref index);
+            var index = 1;
+            return Merge(listToMerge[0], listToMerge, ref index); 
         }
 
         static bool IsCorrectSymbol(string item, char symbol)
